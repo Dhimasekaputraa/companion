@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Companion</title>
+    <link href='https://fonts.googleapis.com/css?family=Pixelify Sans' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Window Border -->
+    <div class="title-bar">
+      <div class="title">Companion</div>
+
+      <div class="title-bar-btns">
+        <button id="min-btn">-</button>
+        <button id="close-btn">x</button>
+      </div>
+    </div>
+    <!-- Calendar -->
+    <section class="calendar" id="calendar">
+      <p id="calendar-title">Ginger Calendar</p>
+      <section class="date-container">
+        <div id="date-today"></div>
+        <div id="month-today"></div>
+      </section>
+    </section>
+
+    <!-- date modal -->
+     <div id="birthday-modal" class="modal hidden">
+      <div class="modal-content">
+        <p id="modal-label">Set Your Birthday</p>
+
+        <input type="number" id="birthday-day" min="1" max="31" placeholder="Day">
+        
+        <select id="birthday-month">
+          <option value="0">January</option>
+          <option value="1">February</option>
+          <option value="2">March</option>
+          <option value="3">April</option>
+          <option value="4">May</option>
+          <option value="5">June</option>
+          <option value="6">July</option>
+          <option value="7">August</option>
+          <option value="8">September</option>
+          <option value="9">October</option>
+          <option value="10">November</option>
+          <option value="11">December</option>
+        </select>
+
+        <div class="modal-actions">
+          <button id="save-birthday">Save</button>
+          <button id="cancel-birthday">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Button -->
+     <button id="info-button" class="icon-btn">
+      <img src="asset/info-button.png" alt="Info Icon" /> Funfact
+     </button>
+    <section class="button-container">
+      <button id="audio-toggle" class="icon-btn">
+      <img id="audio-icon" src="asset/music-on-button.png" alt="Audio On"> Music
+    </button>
+      <button id="petting" class="icon-btn">
+        <img src="asset/petting-button.png" alt="Pet Icon" /> Pet
+      </button>
+      <button id="chatting" class="icon-btn">
+        <img src="asset/chatting-button.png" alt="Chat Icon" /> Chat
+      </button>
+    </section>
+    <!-- Pet -->
+    <div class="pet-wrapper">
+      <img class="shadow" src="asset/shadow.png" alt="Shadow" />
+      <div class="pet"></div>
+    </div>
+    
+    <!-- Text -->
+    <div class = "text_container">
+      <u class="pet-name">Ginger</u>
+      <div id="bubble">
+        <div id="bubble-content">Hi! I'm Ginger, your virtual cat companion!</div>
+        <small id="bubble-hint" class="hidden">(Click to continue)</small>
+        <form id="chat-form" class="hidden">
+          <div class="options">
+            <label><input type="radio" name="mood" value="happy">Im Good</label>
+            <label><input type="radio" name="mood" value="sad">Im not feeling so good</label>
+          </div>
+          <button type="submit">
+            <img src="asset/send-button.png" alt="Send Icon" /> Send
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="/src/renderer.js"></script>
+  </body>
+</html>
