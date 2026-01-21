@@ -13,7 +13,7 @@ module.exports = {
       name: '@electron-forge/maker-squirrel',
       config: {
         setupIcon: path.resolve(__dirname, 'public/asset/companion-logo.ico'),
-        iconUrl: 'https://example.com/companion-logo.ico',
+        iconUrl: 'https://raw.githubusercontent.com/Dhimasekaputraa/companion/refs/heads/main/public/asset/companion-logo.ico',
       },
     },
     {
