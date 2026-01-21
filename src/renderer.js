@@ -30,6 +30,11 @@ import './index.css';
 
 // --- Select DOM Elements ---
 const pet = document.querySelector('.pet');
+const gift = document.getElementById('gift');
+const giftModal = document.getElementById('gift-modal');
+const closeGiftBtn = document.getElementById('close-gift');
+const giftText = document.getElementById('gift-text');
+const giftSign = document.getElementById('gift-sign');
 const bubble = document.getElementById('bubble');
 const bubbleContent = document.getElementById('bubble-content');
 const funfactBtn = document.getElementById('info-button');
@@ -68,6 +73,18 @@ const data = getSavedBirthday();
 dayInput.value = data.day;
 monthSelect.value = data.month;
 
+const GIFT_MESSAGE = {
+  text: `Hi there,
+        If you're reading this, I just want to say thank you for still being here (and for opening this app today).
+        Life isn't always easy, and the fact that you're still here deserves more credit than you probably give yourself.
+        I know this isn't much, but I hope it manages to bring at least a small smile to your face.
+        I wish everything goes well for you in the future.
+
+        Happy Birthday!`,
+  sign: '- Dims'
+};
+
+
 function isBirthdayToday() {
   const today = new Date();
   const birthday = getSavedBirthday();
@@ -84,16 +101,36 @@ function refreshBirthdayState(updateText = true) {
 
   if (isBirthdayToday()) {
     pet.classList.add('birthday');
+    gift.classList.remove('hidden');
+
     if (updateText && chatState === 'idle') {
       bubbleContent.textContent = ' Hi, Today is your special day! Ginger wishes you have a purr-fect day!';
     }
+
+     if (!giftText.textContent) {
+      giftText.textContent = GIFT_MESSAGE.text;
+      giftSign.textContent = GIFT_MESSAGE.sign;
+    }
+    
   } else {
     pet.classList.add('normal');
+    gift.classList.add('hidden');
+
     if (updateText && chatState === 'idle') {
       bubbleContent.textContent = "Hi! I'm Ginger, your virtual cat companion!";
     }
   }
 }
+
+// -- Birtday letter ---
+gift.addEventListener('click', () => {
+  if (chatState !== 'idle') return;
+  giftModal.classList.remove('hidden');
+});
+
+closeGiftBtn.addEventListener('click', () => {
+  giftModal.classList.add('hidden');
+});
 
 function getSavedBirthday() {
   const data = localStorage.getItem('birthday');
@@ -165,6 +202,8 @@ function updateMaxDay() {
 monthSelect.addEventListener('change', updateMaxDay);
 
 calendar.addEventListener('click', () => {
+  if (chatState !== 'idle') return;
+
   modal.classList.remove('hidden');
   const savedData = getSavedBirthday();
   if (savedData) {
@@ -250,7 +289,7 @@ chatForm.addEventListener('submit', (e) => {
   if (!selectedMood) return;
 
   chatForm.classList.add('hidden');
-  bubbleContent.textContent = (selectedMood === 'happy') ? "Glad to hear that! *purr*" : "*Meow* don't be sad, Ginger is here for you.";
+  bubbleContent.textContent = (selectedMood === 'happy') ? "Glad to hear that! *purr*" : "*Meow..* it's okayy, Ginger is here with you.";
   
   setChatState('chat-result');
 
@@ -318,12 +357,7 @@ function funfact() {
    setTimeout(() => {
     bubble.addEventListener('click', resetToIdle);
     bubble.style.cursor = "pointer"; 
-  }, 500);
-
-   autoResetTimer = setTimeout(() => {
-    if (chatState === 'funfact') resetToIdle();
-  }, 15000);
-  
+  }, 500);  
   }
 funfactBtn.addEventListener('click', funfact);
 

@@ -18,6 +18,7 @@
         <button id="close-btn">x</button>
       </div>
     </div>
+
     <!-- Calendar -->
     <section class="calendar" id="calendar">
       <p id="calendar-title">Ginger Calendar</p>
@@ -71,6 +72,21 @@
         <img src="asset/chatting-button.png" alt="Chat Icon" /> Chat
       </button>
     </section>
+
+    <!-- Gift -->
+    <section id="gift" class="gift hidden">
+      <div class="gift-box"></div>
+    </section>
+
+    <!-- Gift Modal -->
+    <div id="gift-modal" class="modal hidden">
+      <div class="modal-content">
+        <p id="gift-text"></p>
+        <p id="gift-sign"></p>
+          <button id="close-gift">Close</button>
+      </div>
+    </div>
+
     <!-- Pet -->
     <div class="pet-wrapper">
       <img class="shadow" src="asset/shadow.png" alt="Shadow" />
@@ -85,8 +101,8 @@
         <small id="bubble-hint" class="hidden">(Click to continue)</small>
         <form id="chat-form" class="hidden">
           <div class="options">
-            <label><input type="radio" name="mood" value="happy">Im Good</label>
-            <label><input type="radio" name="mood" value="sad">Im not feeling so good</label>
+            <label><input type="radio" name="mood" value="happy">Feeling great</label>
+            <label><input type="radio" name="mood" value="sad">Not feeling great</label>
           </div>
           <button type="submit">
             <img src="asset/send-button.png" alt="Send Icon" /> Send

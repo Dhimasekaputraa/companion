@@ -38,7 +38,7 @@ const createWindow = () => {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 
-
+app.commandLine.appendSwitch('force-device-scale-factor', '1');
 
 app.whenReady().then(() => {
   Menu.setApplicationMenu(null)

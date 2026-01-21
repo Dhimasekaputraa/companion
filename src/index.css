@@ -418,3 +418,46 @@ body {
   padding: 0;
   cursor: pointer;
 }
+
+.gift.hidden {
+  display: none;
+}
+
+.gift {
+  width: 128px;
+  height: 128px;
+  position:absolute;
+  top: 57%;
+  left: 2%;
+  transform: translateX(-50%);
+  transform: scale(0.8);
+  cursor: pointer;
+  z-index: 10;
+  animation: gift-bounce 1.6s steps(16) infinite;
+  background: url(asset/gift-sprite.png);
+  image-rendering: pixelated;
+}
+
+@keyframes gift-bounce {
+  0% { 
+    background-position: 0 0; 
+    }
+  100% { 
+    background-position: -2048px 0 ;
+    }
+}
+
+.gift-text {
+  font-size: 12px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+#close-gift {
+  font-family: 'Pixelify Sans';
+  background: none;
+  border: none;
+  font-size: 12px;
+  opacity: 0.6;
+  cursor: pointer;
+}
