@@ -51,11 +51,15 @@ const audioToggleBtn = document.getElementById('audio-toggle');
 const audioIcon = document.getElementById('audio-icon');
 
 // --- Audio Setup ---
-const petSound = new Audio('asset/pet-sfx.mp3');
-const bgm = new Audio('asset/bgm.mp3');
+const petSound = new Audio(new URL('../asset/pet-sfx.mp3', import.meta.url).href);
+const bgm = new Audio(new URL('../asset/bgm.mp3', import.meta.url).href);
 bgm.loop = true;
 bgm.volume = 0.4;
 let isMuted = false;
+
+const ICON_MUSIC_ON = new URL('../asset/music-on-button.png', import.meta.url).href;
+const ICON_MUSIC_OFF = new URL('../asset/music-off-button.png', import.meta.url).href;
+
 
 // --- State Variables ---
 let chatState = 'idle'; //idle, chatting, chat-result, funfact
@@ -173,10 +177,10 @@ audioToggleBtn.addEventListener('click', () => {
   isMuted = !isMuted;
   if (isMuted) {
     bgm.volume = 0;
-    audioIcon.src = 'asset/music-off-button.png';
+    audioIcon.src = ICON_MUSIC_OFF;
   } else {
     bgm.volume = 0.4;
-    audioIcon.src = 'asset/music-on-button.png';
+    audioIcon.src = ICON_MUSIC_ON;
     if (bgm.paused) bgm.play();
   }
 });

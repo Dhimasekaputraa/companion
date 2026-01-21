@@ -10,7 +10,7 @@ if (started) {
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    icon : "asset/companion-logo.ico",
+    icon : "public/asset/companion-logo.ico",
     width: 480,
     height: 640,
     frame : false,

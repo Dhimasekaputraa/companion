@@ -11,7 +11,7 @@ body {
     'Pixelify Sans';
   margin: auto;
   max-width: 38rem;
-  background-image: url(asset/background.png);
+  background-image: url(/asset/background.png);
   
   border : 12px solid #f89a20;
 
@@ -276,32 +276,32 @@ body {
 }
 
 .pet.normal {
-  background : url(asset/idle-cat-sprite.png);
+  background : url(/asset/idle-cat-sprite.png);
   animation : idle 1.6s steps(16) infinite;
 }
 
 .pet.birthday {
-  background : url(asset/idle-cat-birthday-sprite.png);
+  background : url(/asset/idle-cat-birthday-sprite.png);
   animation : idle 1.6s steps(16) infinite;
 }
 
 .pet.petting-normal {
-  background : url(asset/petting-cat-sprite.png);
+  background : url(/asset/petting-cat-sprite.png);
   animation : petting 1.6s steps(16) 1;
 }
 
 .pet.petting-birthday {
-  background : url(asset/petting-cat-birthday-sprite.png);
+  background : url(/asset/petting-cat-birthday-sprite.png);
   animation : petting 1.6s steps(16) 1;
 }
 
 .pet.chatting-normal {
-  background : url(asset/chatting-cat-sprite.png);
+  background : url(/asset/chatting-cat-sprite.png);
   animation : chatting 1.6s steps(16) 1;
 }
 
 .pet.chatting-birthday {
-  background : url(asset/chatting-cat-birthday-sprite.png);
+  background : url(/asset/chatting-cat-birthday-sprite.png);
   animation : chatting 1.6s steps(16) 1;
 }
 
@@ -434,7 +434,7 @@ body {
   cursor: pointer;
   z-index: 10;
   animation: gift-bounce 1.6s steps(16) infinite;
-  background: url(asset/gift-sprite.png);
+  background: url(/asset/gift-sprite.png);
   image-rendering: pixelated;
 }
 
