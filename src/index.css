@@ -11,7 +11,11 @@ body {
     'Pixelify Sans';
   margin: auto;
   max-width: 38rem;
+
   background-image: url(/asset/background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   
   border : 12px solid #f89a20;
 
@@ -184,6 +188,10 @@ body {
   font-family: 'Pixelify Sans';
 }
 
+#save-birthday:hover{
+  transform: scale(1.03);
+}
+
 #cancel-birthday {
   background-color: beige;
   border: none;
@@ -192,6 +200,10 @@ body {
   border : solid 4px #f89a20;
   cursor: pointer;
   font-family: 'Pixelify Sans';
+}
+
+#cancel-birthday:hover{
+  transform: scale(1.03);
 }
 
 .button-container {
@@ -233,7 +245,7 @@ body {
 
 .icon-btn:hover {
   opacity: 0.8;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 #audio-toggle {
@@ -404,6 +416,7 @@ body {
 
 #chat-form button:hover {
   opacity: 0.8;
+  transform: scale(1.03);
 }
 
 #bubble-hint {
