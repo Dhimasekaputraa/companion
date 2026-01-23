@@ -66,6 +66,22 @@ let chatState = 'idle'; //idle, chatting, chat-result, funfact
 let currentAnimation = null;
 let autoResetTimer = null;
 
+// --- Greetings ----
+function getGreeting() {
+  const hour = new Date().getHours();
+
+  if (hour >= 5 && hour < 11) {
+    return "Good morning! Ginger is ready to start the day with you!";
+  } else if (hour >= 11 && hour < 15) {
+    return "Good afternoon! Ginger is here to keep you company for the rest of the day";
+  } else if (hour >= 15 && hour < 19) {
+    return "Good evening! Ginger is here to sit with you and enjoy the evening";
+  } else {
+    return "Ginger is here to keep you company tonight";
+  }
+}
+
+
 // --- Birthday Functions ---
 
 const DEFAULT_BIRTHDAY = {
@@ -121,7 +137,7 @@ function refreshBirthdayState(updateText = true) {
     gift.classList.add('hidden');
 
     if (updateText && chatState === 'idle') {
-      bubbleContent.textContent = "Hi! I'm Ginger, your virtual cat companion!";
+      bubbleContent.textContent = getGreeting();
     }
   }
 }
