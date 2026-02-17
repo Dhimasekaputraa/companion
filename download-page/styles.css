@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family : 'Pixelify Sans';
+}
+
+/* NAVBAR */
+.navbar{
+    background-color: #f89a20;
+    padding: 10px 24px;
+    font-size: 24px;
+    position: sticky;
+    top: 0;
+    z-index: 100; 
+}
+
+.navbar ul{
+    display: flex;
+    align-items: center;           
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li{
+    display : inline-block;
+    margin : 0 12px 0 12px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #4e2601;
+    font-weight: 200;
+}
+
+.navbar li:nth-child(2) {
+    margin-left: auto;
+}
+
+.download-button {
+    background-color: beige;
+    color: #4e2601;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.download-button:hover {
+    background-color: #4e2601;
+    color: #ffe8cc;
+    transform: translateY(-2px);
+}
+
+/* HERO SECTION */
+.hero-section {
+    background-color: #ffe680;
+    padding: 32px 48px;
+    display : flex;
+    align-items: center;
+    gap : 32px;
+}
+
+.companion-logo{
+    width: 512px;
+    height: auto;
+    margin-top: 20px;
+    position: relative;
+    image-rendering: pixelated;
+}
+
+.text-container {
+    width: 512px;
+    font-size: 24px;
+}
+
+/* DOWNLOAD SECTION */
+.download-section {
+    background-color: #c86527;
+    color: #ffe8cc;
+    padding : 40px 64px;
+}
+
+.download-content{
+    display : flex;
+    align-items: center;
+    gap : 40px;
+}
+
+.release-title{
+    font-size: 36px;
+    margin-bottom: 16px;
+    order : 1;
+}
+
+.screenshot img{
+    width : 320px;
+    border : solid 4px #4e2601;
+    border-radius : 8px;
+    image-rendering: pixelated;
+}
+
+.feature-title{
+    font-size: 32px;
+    margin-bottom: 24px;
+    display : flex;
+}
+
+.feature-text-container{
+    max-width: 512px;
+    font-size: 24px;
+    order: 3;
+}
+
+.feature-desc{
+    margin-bottom: 24px;
+}
+
+.os-desc {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-left: 12px;
+}
+
+.slider-controls {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    order: 2;
+}
+
+.slider-controls button {
+    background-color: beige;
+    color: #4e2601;
+    border: 3px solid #4e2601;
+    padding: 6px 12px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.slider-controls button:hover {
+    background-color: #fff1c1;
+}
+
+
+.footer{
+    background-color: #4d2404;
+    color: #ffe8cc;
+    text-align: center;
+    padding: 16px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+    }
+
+    .navbar li {
+        margin: 6px;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px 16px;
+    }
+
+    .companion-logo {
+        width: 280px;
+        padding-bottom: 0px;
+    }
+
+    .text-container {
+        width: 100%;
+        font-size: 18px;
+        margin-top: -16px;
+        margin-bottom: 16px;
+    }
+
+     .download-section {
+        padding: 24px 16px;
+    }
+
+      .download-content {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .release-title {
+        order: 1;
+        margin-bottom: 16px;
+    }
+
+     .screenshot img {
+        max-width: 220px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .feature-title{
+        justify-content: center;
+    }
+
+    .feature-text-container {
+        max-width: 100%;
+        font-size: 18px;
+        order: 3;
+        justify-content: center;
+    }
+
+    .download-button-section {
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .os-desc {
+        display: block;
+        font-size: 14px;
+        padding-top: 10px;
+        justify-content: center;
+    }
+
+     .slider-controls {
+        justify-content: center;
+        order: 2;
+        display : flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .slider-controls button {
+        font-size: 24px;
+        padding: 8px 12px;
+    }
+
+      .footer {
+        font-size: 12px;
+        padding: 12px;
+    }
+}
