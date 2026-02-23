@@ -23,6 +23,16 @@ body {
   flex-direction : column;
 }
 
+@font-face {
+  font-family: 'Pixelify Sans';
+  src: url('/fonts/pixelify/PixelifySans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Press Start 2P';
+  src: url('/fonts/press_start_2p/PressStart2P-Regular.ttf') format('truetype');
+}
+
 .title-bar {
   display: flex;
   align-items: center;
@@ -150,6 +160,23 @@ body {
   border : solid 6px #f89a20;
   text-align: center;
   width: 220px;
+  font-family : 'Pixelify Sans';
+}
+
+#gift-title {
+  font-size : 24px;
+  padding-bottom: 8px;
+  text-align : center;
+}
+
+.gift-modal {
+  line-height : 1.15;
+  background: beige;
+  padding: 16px;
+  border-radius: 12px;
+  border : solid 6px #f89a20;
+  text-align: center;
+  width: 240px;
   font-family : 'Pixelify Sans';
 }
 

@@ -95,10 +95,12 @@ monthSelect.value = data.month;
 
 const GIFT_MESSAGE = {
   text: `Hi there,
-        If you're reading this, I just want to say thank you for still being here (and for opening this app today).
-        Life isn't always easy, and the fact that you're still here deserves more credit than you probably give yourself.
-        I know this isn't much, but I hope it manages to bring at least a small smile to your face.
-        I wish everything goes well for you in the future.
+        If you're reading this, I just want to say thank you for checking out this project!
+        It may not have many features yet, but your suggestions and feedback will make it even better.
+        They truly mean a lot to me and to this project!
+
+        Anyway, congratulations on stepping into a new chapter of your life.
+        Wishing you all the best, and may everything go well for you!
 
         Happy Birthday!`,
   sign: '- Dims'
