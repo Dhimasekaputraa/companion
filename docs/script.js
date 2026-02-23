@@ -1,3 +1,4 @@
+// Feature list
 const features = [
     {
         image: "assets/screenshot-1.png",
@@ -16,6 +17,7 @@ const features = [
     }
 ];
 
+// Image slider
 let currentIndex = 0;
 
 const img = document.getElementById("feature-image");
@@ -37,3 +39,17 @@ document.getElementById("prev-btn").onclick = () => {
     currentIndex = (currentIndex - 1 + features.length) % features.length;
     updateFeature(currentIndex);
 };
+
+// Download link
+const versionSelect = document.getElementById('version-select');
+const downloadLink = document.getElementById('download-link');
+
+versionSelect.addEventListener('change', function() {
+    const selectedUrl = this.value;
+    
+    downloadLink.href = selectedUrl;
+    
+    console.log("Link updated to: " + selectedUrl);
+});
+
+downloadLink.href = versionSelect.value;

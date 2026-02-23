@@ -53,7 +53,6 @@ body{
 .download-button:hover {
     background-color: #4e2601;
     color: #ffe8cc;
-    transform: translateY(-2px);
 }
 
 /* HERO SECTION */
@@ -148,6 +147,14 @@ body{
     background-color: #fff1c1;
 }
 
+.app-version{
+    background-color: beige;
+    color: #4d2404;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-family: 'Pixelify Sans';
+}
 
 .footer{
     background-color: #4d2404;
